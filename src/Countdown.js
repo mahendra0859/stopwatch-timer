@@ -28,13 +28,12 @@ export default class Countdown extends Component {
         this.setState({ timerOn: false });
     }
     resetTimer = () => {
-        // if (this.state.timerOn === false) {
-        //     this.setState({ timerTime: this.state.timerStart });
-        // }
-        this.setState({
-            timerStart: 0,
-            timerTime: 0
-        });
+        if (this.state.timerOn === false) {
+            this.setState({
+                timerStart: 0,
+                timerTime: 0
+            });
+        }
     }
     adjustTimer = input => {
         const { timerTime, timerOn } = this.state;
